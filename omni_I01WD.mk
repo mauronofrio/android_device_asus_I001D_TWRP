@@ -26,10 +26,10 @@ $(call inherit-product, vendor/omni/config/common.mk)
 $(call inherit-product, device/asus/I01WD/device.mk)
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ASUS_I01WD
+PRODUCT_DEVICE := I01WD
 PRODUCT_NAME := omni_I01WD
 PRODUCT_BRAND := asus
-PRODUCT_MODEL := ASUS_I01WD
+PRODUCT_MODEL := I01WD
 PRODUCT_MANUFACTURER := Asus
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
