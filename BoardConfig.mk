@@ -76,8 +76,8 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 
 # Partitions (listed in the file) to be wiped under recovery.
-TARGET_RECOVERY_WIPE := device/asus/I01WD/recovery.wipe
-TARGET_RECOVERY_FSTAB := device/asus/I01WD/recovery.fstab
+#TARGET_RECOVERY_WIPE := device/asus/I01WD/recovery.wipe
+#TARGET_RECOVERY_FSTAB := device/asus/I01WD/recovery.fstab
 
 
 # Workaround for error copying vendor files to recovery ramdisk
@@ -95,7 +95,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_SUPERSU := true
-TW_EXTRA_LANGUAGES := true
+#TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
 AB_OTA_UPDATER := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -109,7 +109,7 @@ TW_NO_SCREEN_BLANK := true
 TW_USE_TOOLBOX := true
 
 # Use mke2fs to create ext4 images
-TARGET_USES_MKE2FS := true
+#TARGET_USES_MKE2FS := true
 
 # A/B updater updatable partitions list. Keep in sync with the partition list
 # with "_a" and "_b" variants in the device. Note that the vendor can add more
@@ -133,7 +133,10 @@ TW_USE_LEDS_HAPTICS := true
 USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := device/asus/I01WD/installer
 TW_EXCLUDE_TWRPAPP := true
-TW_INCLUDE_REPACKTOOLS := true
+#TW_INCLUDE_REPACKTOOLS := true
 TW_HAS_EDL_MODE := true
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
+#TWRP_INCLUDE_LOGCAT := true
+#TARGET_USES_LOGD := true
+
+BOARD_CUSTOM_BOOTIMG_MK := device/asus/I01WD/custombootimg.mk
+LZMA_RAMDISK_TARGETS := recovery
