@@ -15,7 +15,7 @@
 #
 
 # Release name
-PRODUCT_RELEASE_NAME := I01WD
+PRODUCT_RELEASE_NAME := ASUS_I01WD
 
 $(call inherit-product, build/target/product/embedded.mk)
 
@@ -23,11 +23,11 @@ $(call inherit-product, build/target/product/embedded.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from hardware-specific part of the product configuration
-$(call inherit-product, device/asus/I01WD/device.mk)
+$(call inherit-product, device/asus/ASUS_I01WD/device.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ASUS_I01WD
-PRODUCT_NAME := omni_I01WD
+PRODUCT_NAME := omni_ASUS_I01WD
 PRODUCT_BRAND := asus
 PRODUCT_MODEL := ASUS_I01WD
 PRODUCT_MANUFACTURER := asus
@@ -35,7 +35,11 @@ PRODUCT_MANUFACTURER := asus
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=WW_I01WD \
     BUILD_PRODUCT=ASUS_I01WD \
-    TARGET_DEVICE=ASUS_I01WD
+    TARGET_DEVICE=WW_I01WD
+
+PRODUCT_SYSTEM_PROPERTY_BLACKLIST += \
+    ro.bootimage.build.date.utc \
+    ro.build.date.utc
 
 # HACK: Set vendor patch level
 PRODUCT_PROPERTY_OVERRIDES += \

@@ -1,1 +1,1 @@
-add_lunch_combo omni_I01WD-eng
+add_lunch_combo omni_ASUS_I01WD-eng

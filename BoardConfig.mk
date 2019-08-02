@@ -49,7 +49,7 @@ BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom andro
 BOARD_KERNEL_CMDLINE += skip_override androidboot.fastboot=1
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_PREBUILT_KERNEL := device/asus/I01WD/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/asus/ASUS_I01WD/prebuilt/Image.gz-dtb
 
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
@@ -83,6 +83,10 @@ BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 # Workaround for error copying vendor files to recovery ramdisk
 BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
+
+#Init
+TARGET_INIT_VENDOR_LIB := libinit_ASUS_I01WD
+TARGET_RECOVERY_DEVICE_MODULES := libinit_ASUS_I01WD
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -131,12 +135,12 @@ BOARD_USES_METADATA_PARTITION := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 TW_USE_LEDS_HAPTICS := true
 USE_RECOVERY_INSTALLER := true
-RECOVERY_INSTALLER_PATH := device/asus/I01WD/installer
+RECOVERY_INSTALLER_PATH := device/asus/ASUS_I01WD/installer
 TW_EXCLUDE_TWRPAPP := true
 #TW_INCLUDE_REPACKTOOLS := true
 TW_HAS_EDL_MODE := true
 #TWRP_INCLUDE_LOGCAT := true
 #TARGET_USES_LOGD := true
 
-BOARD_CUSTOM_BOOTIMG_MK := device/asus/I01WD/custombootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := device/asus/ASUS_I01WD/custombootimg.mk
 LZMA_RAMDISK_TARGETS := recovery
