@@ -48,7 +48,7 @@ toolname="/magiskboot"
 tool="$tmp$toolname"
 targetfile="/boot.img"
 target="$tmp$targetfile"
-recoverycpio=`(ls ramdisk-twrp.cpio || ls ramdisk-recovery.cpio) 2>/dev/null`
+recoverycpio=`(ls ramdisk-twrp.cpio || ls ramdisk-recovery.cpio*) 2>/dev/null`
 
 chmod 755 "$tool"
 
