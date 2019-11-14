@@ -144,3 +144,4 @@ TW_HAS_EDL_MODE := true
 
 BOARD_CUSTOM_BOOTIMG_MK := device/asus/ASUS_I01WD/custombootimg.mk
 LZMA_RAMDISK_TARGETS := recovery
+PLATFORM_VERSION := 16.1.0
