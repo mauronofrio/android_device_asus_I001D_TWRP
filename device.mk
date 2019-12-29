@@ -1,5 +1,5 @@
 
-LOCAL_PATH := device/asus/ASUS_I01WD
+LOCAL_PATH := device/asus/ASUS_I001D
 
 # define hardware platform
 PRODUCT_PLATFORM := msmnile

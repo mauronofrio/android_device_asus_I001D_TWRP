@@ -1,6 +1,6 @@
-# Device Tree Asus ZenFone 6 (ASUS_I01WD)
+# Device Tree Asus ZenFone 6 (ASUS_I001D)
 
-The Asus ZenFone 6 (codenamed _"ASUS_I01WD"_) is a smartphone from Asus.
+The Asus ZenFone 6 (codenamed _"ASUS_I001D"_) is a smartphone from Asus.
 It was released in May 2019.
 
 ## Compile
@@ -16,7 +16,7 @@ Then add these string to .repo/manifests/remove.xml
 Then add these projects to .repo/local_manifests/roomservice.xml (If you don't have it, you can add them to .repo/manifest.xml): 
 
 ```xml
-<project name="mauronofrio/android_device_asus_I01WD_TWRP" path="device/asus/ASUS_I01WD" remote="github" revision="android-9.0" />
+<project name="mauronofrio/android_device_asus_I001D_TWRP" path="device/asus/ASUS_I001D" remote="github" revision="android-9.0" />
 ```
 
 Now you can sync your source:
@@ -33,14 +33,14 @@ Finally execute these:
 . build/envsetup.sh
 export ALLOW_MISSING_DEPENDENCIES=true
 export LC_ALL=C
-lunch omni_ASUS_I01WD-eng 
+lunch omni_ASUS_I001D-eng 
 mka adbd recoveryimage 
 ```
 
 To test it:
 
 ```
-fastboot boot out/target/product/ASUS_I01WD/recovery.img
+fastboot boot out/target/product/ASUS_I001D/recovery.img
 ```
 
-Kernel Source: https://github.com/LineageOS/android_kernel_asus_sm8150
+Precompiled stock one

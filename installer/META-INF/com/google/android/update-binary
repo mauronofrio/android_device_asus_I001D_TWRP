@@ -32,7 +32,7 @@ extract() {
 }
 
 print "########################################"
-print "#     TWRP installer for ZenFone 6     #"
+print "#    TWRP installer for Rog Phone 2    #"
 print "#            by mauronofrio            #"
 print "########################################"
 print

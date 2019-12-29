@@ -25,7 +25,7 @@
 
 LOCAL_PATH := $(call my-dir)
 
-ifeq ($(TARGET_DEVICE),ASUS_I01WD)
+ifeq ($(TARGET_DEVICE),ASUS_I001D)
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
