@@ -18,4 +18,3 @@
 
 # Removable storage
 /usbstorage      vfat    /dev/block/sdg1                            /dev/block/sdg     flags=fsflags=utf8;display="USB Storage";storage;wipeingui;removable
-/sdcard1    auto    /dev/block/mmcblk0p1        flags=display="MicroSD";storage;wipeingui;removable
