@@ -105,7 +105,7 @@ TW_THEME := portrait_hdpi
 TARGET_RECOVERY_DEVICE_MODULES += android.hardware.boot@1.0
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
-#TW_NO_SCREEN_BLANK := true
+TW_NO_SCREEN_BLANK := true
 TW_USE_TOOLBOX := true
 
 # Use mke2fs to create ext4 images
@@ -133,11 +133,11 @@ TW_USE_LEDS_HAPTICS := true
 USE_RECOVERY_INSTALLER := true
 RECOVERY_INSTALLER_PATH := device/asus/ASUS_I001D/installer
 TW_EXCLUDE_TWRPAPP := true
-#TW_INCLUDE_REPACKTOOLS := true
+TW_INCLUDE_REPACKTOOLS := true
 TW_HAS_EDL_MODE := true
-#TWRP_INCLUDE_LOGCAT := true
-#TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
-BOARD_CUSTOM_BOOTIMG_MK := device/asus/ASUS_I001D/custombootimg.mk
-LZMA_RAMDISK_TARGETS := recovery
+#BOARD_CUSTOM_BOOTIMG_MK := device/asus/ASUS_I001D/custombootimg.mk
+#LZMA_RAMDISK_TARGETS := recovery
 PLATFORM_VERSION := 16.1.0
