@@ -95,7 +95,7 @@ TARGET_RECOVERY_QCOM_RTC_FIX := true
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel0-backlight/brightness"
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 TW_EXCLUDE_SUPERSU := true
-#TW_EXTRA_LANGUAGES := true
+TW_EXTRA_LANGUAGES := true
 TW_INCLUDE_NTFS_3G := true
 AB_OTA_UPDATER := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
@@ -109,7 +109,7 @@ TW_NO_SCREEN_BLANK := true
 TW_USE_TOOLBOX := true
 
 # Use mke2fs to create ext4 images
-#TARGET_USES_MKE2FS := true
+TARGET_USES_MKE2FS := true
 
 # A/B updater updatable partitions list. Keep in sync with the partition list
 # with "_a" and "_b" variants in the device. Note that the vendor can add more
