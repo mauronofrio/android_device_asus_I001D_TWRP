@@ -3,6 +3,7 @@ LOCAL_PATH := device/asus/ASUS_I001D
 
 # define hardware platform
 PRODUCT_PLATFORM := msmnile
+TARGET_USES_HARDWARE_QCOM_BOOTCTRL := true
 
 #TEST
 # A/B support
