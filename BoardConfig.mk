@@ -48,7 +48,7 @@ TARGET_USES_UEFI := true
 BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 swiotlb=2048 firmware_class.path=/vendor/firmware_mnt/image loop.max_part=7 androidboot.usbcontroller=a600000.dwc3
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
-TARGET_PREBUILT_KERNEL := device/asus/ASUS_I001D/prebuilt/Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/asus/I001D/prebuilt/Image.gz-dtb
 
 # Platform
 TARGET_BOARD_PLATFORM := msmnile
@@ -80,8 +80,8 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 TARGET_COPY_OUT_VENDOR := vendor
 
 #Init
-TARGET_INIT_VENDOR_LIB := libinit_ASUS_I001D
-TARGET_RECOVERY_DEVICE_MODULES := libinit_ASUS_I001D
+TARGET_INIT_VENDOR_LIB := libinit_I001D
+TARGET_RECOVERY_DEVICE_MODULES := libinit_I001D
 
 # Recovery
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -100,8 +100,8 @@ TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_MAX_BRIGHTNESS := 255
 TW_DEFAULT_BRIGHTNESS := 120
 TW_THEME := portrait_hdpi
-TARGET_RECOVERY_DEVICE_MODULES += android.hidl.base@1.0 bootctrl.$(TARGET_BOARD_PLATFORM) libicuuc libion libprocinfo libxml2 update_engine_sideload
-TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT)/lib64/android.hidl.base@1.0.so $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so $(TARGET_OUT_SHARED_LIBRARIES)/libion.so $(TARGET_OUT_SHARED_LIBRARIES)/libprocinfo.so $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so
+TARGET_RECOVERY_DEVICE_MODULES += android.hidl.base@1.0 bootctrl.$(TARGET_BOARD_PLATFORM) libicuuc libion libprocinfo libxml2 tzdata update_engine_sideload
+TW_RECOVERY_ADDITIONAL_RELINK_FILES += $(TARGET_OUT_SHARED_LIBRARIES)/android.hidl.base@1.0.so $(TARGET_OUT_SHARED_LIBRARIES)/libicuuc.so $(TARGET_OUT_SHARED_LIBRARIES)/libion.so $(TARGET_OUT_SHARED_LIBRARIES)/libprocinfo.so $(TARGET_OUT_SHARED_LIBRARIES)/libxml2.so $(TARGET_OUT)/usr/share/zoneinfo/tzdata
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file
 TARGET_RECOVERY_PIXEL_FORMAT := BGRA_8888
 TW_SCREEN_BLANK_ON_BOOT := true
@@ -120,21 +120,24 @@ AB_OTA_PARTITIONS += \
     dtbo
 
 # Encryption
+PLATFORM_VERSION := 16.1.0
 PLATFORM_SECURITY_PATCH := 2099-12-31
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 BOARD_USES_METADATA_PARTITION := true
 
 # Extras
+TW_HAPTICS_TSPDRV := true
 BOARD_SUPPRESS_SECURE_ERASE := true
+USE_COMMON_BOOTCTRL := true
+USE_COMMON_GPTUTILS := true
 USE_RECOVERY_INSTALLER := true
-RECOVERY_INSTALLER_PATH := device/asus/ASUS_I001D/installer
+RECOVERY_INSTALLER_PATH := device/asus/I001D/installer
 TW_EXCLUDE_TWRPAPP := true
 TW_INCLUDE_REPACKTOOLS := true
 TW_HAS_EDL_MODE := true
-TWRP_INCLUDE_LOGCAT := true
-TARGET_USES_LOGD := true
+#TWRP_INCLUDE_LOGCAT := true
+#TARGET_USES_LOGD := true
 
-#BOARD_CUSTOM_BOOTIMG_MK := device/asus/ASUS_I001D/custombootimg.mk
+#BOARD_CUSTOM_BOOTIMG_MK := device/asus/I001D/custombootimg.mk
 #LZMA_RAMDISK_TARGETS := recovery
-PLATFORM_VERSION := 16.1.0
